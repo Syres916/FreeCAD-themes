@@ -9,7 +9,7 @@ QTabWidget::pane {
 
 QAbstractItemView {
   background-color: transparent;
-  alternate-background-color: #232932; /* related with QListView background  */
+  alternate-background-color: @NearlyBlack; /* related with QListView background  */
   color: #65A2E5;
   border: transparent;
   padding-right: 5px;
@@ -30,17 +30,17 @@ Gui--OverlayTabWidget[transparent="true"] QTreeView::item {
 
 Gui--OverlayTabWidget[transparent="true"] QTreeView::item:selected {
   color: #ffffff;
-  background-color: #434D5B;
+  background-color: @DarkGrey;
 }
 
 Gui--OverlayTabWidget[transparent="true"] QTreeView::item:focus {
   color: #ffffff;
-  background-color: #2C333D;
+  background-color: @VeryDarkGrey;
 }
 
 Gui--OverlayTabWidget[transparent="true"] QTreeView::item:selected:focus {
   color: #ffffff;
-  background-color: #2C333D;
+  background-color: @VeryDarkGrey;
 }
 
 /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
@@ -70,9 +70,9 @@ Gui--OverlayTabWidget#OverlayBottom {
 }
 
 Gui--PropertyEditor--PropertyEditor {
-  qproperty-groupTextColor: #61D29D;
-  qproperty-groupBackground: #2C333D;
-  qproperty-itemBackground: #2C333D;
+  qproperty-groupTextColor: @TooltipSpecial;
+  qproperty-groupBackground: @VeryDarkGrey;
+  qproperty-itemBackground: @VeryDarkGrey;
 }
 
 Gui--OverlayTabWidget::pane {
@@ -153,7 +153,7 @@ Gui--OverlayToolButton[objectName="OBTN AutoMode"]:hover {
 
 QComboBox QAbstractItemView {
   color: #bebebe; /* same as regular QComboBox color */
-  background-color: #232932;
+  background-color: @NearlyBlack;
   selection-color: white;
   selection-background-color:  @ThemeAccentColor2;
   border-width: 5px 0px 5px 0px;
