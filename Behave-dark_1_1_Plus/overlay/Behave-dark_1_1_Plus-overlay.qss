@@ -1,61 +1,57 @@
-Gui--DockWnd--ReportOutput,
-Gui--TaskView--TaskView QScrollArea {
+QFrame {
   border: none;
- }
+}
 
-QTabWidget::pane{
+QTabWidget::pane {
   background-color: transparent;
   border: transparent;
 }
+
 QAbstractItemView {
-  alternate-background-color: @PrimaryColor;
-  color: @TextForegroundColor;
-  border: 1px solid @GeneralBorderColor
-;
+  background-color: transparent;
+  alternate-background-color: #232932; /* related with QListView background  */
+  color: #65A2E5;
+  border: transparent;
+  padding-right: 5px;
 }
 
 Gui--OverlayTitleBar,
 Gui--OverlaySplitterHandle {
-  background-color: @PrimaryColor;
- }
-
-
-/* Overwrites Properties panel to use white text. */
- Gui--TreePanel QTreeView {
-  background-color: @PrimaryColor;
-  border: 0px solid   @TextForegroundColor;
-  color: @TextForegroundColor;
-  gridline-color: @GeneralGridLinesColor;
-  border-radius: 0px;
+  background-color: transparent;
 }
 
- Gui--TreePanel QTreeView::item {
-  color: @TextForegroundColor;
+Gui--OverlayTabWidget[transparent="false"] QTreeView::item {
+  color: #ffffff;
 }
 
- Gui--TreePanel QTreeView:disabled  {
-  color: @TextDisabledColor;
+Gui--OverlayTabWidget[transparent="true"] QTreeView::item {
+  color: #ffffff;
 }
 
-Gui--PropertyEditor--PropertyEditor {
-  qproperty-itemBackground: @TextEditFieldBackgroundColor;
+Gui--OverlayTabWidget[transparent="true"] QTreeView::item:selected {
+  color: #ffffff;
+  background-color: #434D5B;
 }
 
-Gui--OverlayTabWidget[transparent="false"]  Gui--TreePanel QTreeView::item {
-  color: @TextForegroundColor;
+Gui--OverlayTabWidget[transparent="true"] QTreeView::item:focus {
+  color: #ffffff;
+  background-color: #2C333D;
 }
 
-Gui--OverlayTabWidget[transparent="true"] Gui--TreePanel QTreeView::item {
-  color: @TextForegroundColor;
+Gui--OverlayTabWidget[transparent="true"] QTreeView::item:selected:focus {
+  color: #ffffff;
+  background-color: #2C333D;
 }
 
-Gui--OverlayTabWidget[transparent="true"] Gui--TreePanel QTreeView::item:disabled {
-  color: @TextDisabledColor;
-}
+/* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
+To customize for each overlay docking site, use the following selector
+
+Gui--OverlayTabWidget#OverlayLeft {}
+*/
 
 Gui--OverlayTabWidget {
-  qproperty-effectColor: @3DViewBackgroundRefColor;
-  qproperty-effectBlurRadius: 0;
+  qproperty-effectColor: rgba(25, 25, 25, 220);
+  qproperty-effectBlurRadius: 5;
   qproperty-effectOffsetX: 0;
   qproperty-effectOffsetY: 0;
   qproperty-effectWidth: 1;
@@ -63,14 +59,20 @@ Gui--OverlayTabWidget {
   qproperty-enableEffect: 1;
 }
 
- Gui--OverlayTabWidget#OverlayBottom {
-  qproperty-effectColor: @3DViewBackgroundRefColor;
-  qproperty-effectBlurRadius: 0;
+Gui--OverlayTabWidget#OverlayBottom {
+  qproperty-effectColor: rgba(100, 100, 100, 220);
+  qproperty-effectBlurRadius: 5;
   qproperty-effectOffsetX: 0.0;
   qproperty-effectOffsetY: 0.0;
   qproperty-effectWidth: 1;
   qproperty-effectHeight: 1;
   qproperty-enableEffect: 1;
+}
+
+Gui--PropertyEditor--PropertyEditor {
+  qproperty-groupTextColor: #61D29D;
+  qproperty-groupBackground: #2C333D;
+  qproperty-itemBackground: #2C333D;
 }
 
 Gui--OverlayTabWidget::pane {
@@ -79,63 +81,52 @@ Gui--OverlayTabWidget::pane {
 }
 
 QSint--ActionGroup QFrame[class="content"] {
-  border-bottom: 1px solid @GeneralBorderColor;
-  border-left: 1px solid @GeneralBorderColor;
-  border-right: 1px solid @GeneralBorderColor;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-
-QSint--ActionGroup QFrame[class="header"] {
-  border: 1px solid @GeneralBorderColor;
-  /* border-bottom: 0px solid @GeneralBorderColor; */
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 Gui--OverlayTabWidget::tab-bar:top,
 Gui--OverlayTabWidget::tab-bar:bottom {
-    left: 10px;
-    alignment: left;
+  left: 10px;
+  alignment: left;
 }
 
 Gui--OverlayTabWidget::tab-bar:left,
 Gui--OverlayTabWidget::tab-bar:right {
-    top: 10px;
-    alignment: top;
+  top: 10px;
+  alignment: top;
 }
 
 Gui--OverlayProxyWidget {
   qproperty-hintColor: rgba(250, 250, 250, 0.6);
-  background-color: red;
 }
 
 Gui--OverlayToolButton {
   border: 0.5px solid transparent;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 Gui--OverlayToolButton:hover {
-  border: 0.5px solid @GeneralBorderColor;
-  background-color: @3DViewBackgroundRefColor;
-  border-radius: 1px;
+  border: 0.5px solid #f5f5f5;
+  border-radius: 2px;
+}
+
+Gui--OverlayToolButton:focus {
+  border: 0.5px solid #0099ff;
+  border-radius: 2px;
 }
 
 Gui--OverlayToolButton::pressed,
 Gui--OverlayToolButton:checked {
-  border: 0.5px solid @GeneralBorderColor;
-  border-radius: 1px;
-  background-color: @ThemeAccentColor1;
+  border: 0.5px solid #696969;
+  border-radius: 2px;
+  background-color: #696969;
 }
 
 Gui--OverlayToolButton:checked:hover {
-  border: 0.5px solid @ThemeAccentColor1;
-  background-color:  @3DViewBackgroundRefColor
+  border: 0.5px solid #f5f5f5;
 }
+
 Gui--OverlayToolButton[objectName="OBTN Transparent"] {
   image: url(qss:@IconsLocationFolderName/transparent-lightgray.svg);
   }
@@ -158,4 +149,23 @@ Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
 
 Gui--OverlayToolButton[objectName="OBTN AutoMode"]:hover {
   image: url(qss:@IconsLocationFolderName/mode-@StylesheetIconsColor.svg);
+}
+
+QComboBox QAbstractItemView {
+  color: #bebebe; /* same as regular QComboBox color */
+  background-color: #232932;
+  selection-color: white;
+  selection-background-color:  @ThemeAccentColor2;
+  border-width: 5px 0px 5px 0px;
+  border-style: solid;
+  border-color: transparent;
+  margin: 0px -1px 0px 0px; /* hack for Mac... try it on Windows and Linux */
+}
+
+QDockWidget QTreeView,
+QDockWidget QListView,
+QDockWidget QTableView {
+    margin: 6px;
+    border: 1px solid #434D5B; /* same as regular QTreeView, QListView and QTableView */
+    min-height: 100px; /* necessary in some areas of FreeCAD */
 }
