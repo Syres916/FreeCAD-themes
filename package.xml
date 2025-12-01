@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
     <name>FreeCAD-themes</name>
-    <version>2025.11.25</version>
-    <date>2025.11.25</date>
+    <version>2025.12.03</version>
+    <date>2025.12.03</date>
     <description>Additional themes for FreeCAD</description>
     <maintainer email="themes@freecad.org">The FreeCAD Team</maintainer>
     <license file="LICENSE">LGPL-2.1-or-later</license>
@@ -23,7 +23,7 @@
             <tag>dark</tag>
             <file>Behave-dark_1_1_Plus.qss</file>
             <file>Behave-dark_1_1_Plus-overlay.qss</file>
-            <file>Behave-dark_1_1_Plus-overlay.yaml</file>
+            <file>Behave-dark_1_1_Plus.yaml</file>
         </preferencepack>
         <preferencepack>
             <name>Dark-contrast</name>
@@ -57,6 +57,14 @@
             <tag>light</tag>
             <file>Light-modern.qss</file>
             <file>Light-modern-overlay.qss</file>
+        </preferencepack>
+        <preferencepack>
+            <name>Light-modern_1_1_Plus</name>
+            <type>Theme</type>
+            <tag>light</tag>
+            <file>Light-modern_1_1_Plus.qss</file>
+            <file>Light-modern_1_1_Plus-overlay.qss</file>
+            <file>Light-modern_1_1_Plus.yaml</file>
         </preferencepack>
     </content>
 </package>
