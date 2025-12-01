@@ -289,7 +289,7 @@ QCheckBox::indicator:checked:disabled {
 
 QCheckBox::indicator:indeterminate {
   background-color: white;
-  border: 1px solid #cccccc;
+  border: 1px solid @CheckBoxBorderColor;
   image: url(qss:images_dark-light/checkbox_indeterminate_dark.svg);
 }
 
@@ -309,7 +309,7 @@ https://doc.qt.io/qt-5/stylesheet-examples.html#customizing-qgroupbox
 --------------------------------------------------------------------------- */
 QGroupBox {
   font-weight: bold;
-  border: 1px solid #cccccc;
+  border: 1px solid @GroupboxBorderColor;
   border-radius: 1.9px;
   padding: 2px;
   margin-top: 10px;
@@ -1341,20 +1341,20 @@ QToolButton::menu-indicator {
 
 QToolButton::menu-arrow {
   image: url(qss:images_dark-light/more_arrow_dark.svg);
-  width: 1.5ex;
-  height: 1.5ex;
+  width: 1.2ex;
+  height: 1.2ex;
   subcontrol-position: right bottom;
   background: transparent;
 }
 QToolButton::menu-arrow:open {
   subcontrol-position: right bottom;
-  width: 1.7ex;
-  height: 1.7ex;
+  width: 1.4ex;
+  height: 1.4ex;
   image: url(qss:images_dark-light/more_arrow_dark.svg);
 }
 QToolButton::menu-arrow:hover {
-  width: 1.7ex;
-  height: 1.7ex;
+  width: 1.4ex;
+  height: 1.4ex;
   image: url(qss:images_dark-light/more_arrow_dark.svg);
 }
 
@@ -2174,6 +2174,16 @@ QTreeView::branch:open:has-children:has-siblings  {
 
 QTreeView::branch:open:has-children:!has-siblings  {
   border-image: url(qss:overlay/darker_tree_lines/branch_end_open_darker.svg) 0;
+}
+
+QListWidget::indicator,
+QTreeView::indicator {
+    color: black;
+    background-color: rgba(255,255,255,20);
+    border: 1px solid @CheckBoxBorderColor;
+    width: 11px;
+    height: 11px;
+    border-radius:2px;
 }
 
 QTreeView::indicator:checked,

@@ -9,7 +9,7 @@ ButtonBorderHooverColor: "@GeneralBorderColor"
 ButtonBottomBackgroundColor: "@PrimaryColorDarken1"
 ButtonTopBackgroundColor: "@PrimaryColorLighten3"
 CheckBoxBackgroundColor: "@TextEditFieldBackgroundColor"
-CheckBoxBorderColor: "@GeneralBorderColor"
+CheckBoxBorderColor: "#cccccc"
 CheckedButtonBottomBackgroundColor: darken(@ButtonBottomBackgroundColor, 5)
 CheckedButtonTopBackgroundColor: darken(@ButtonTopBackgroundColor, 5)
 DefaultButtonBorderColor: blend(@ButtonBorderColor, @AccentColor, 40)
@@ -25,7 +25,7 @@ GeneralDisabledBackgroundColor: "@PrimaryColorDarken3"
 GeneralGridLinesColor: "@PrimaryColorDarken4"
 GeneralHeaderBackgroundColor: "@PrimaryColorDarken2"
 GroupboxBackgroundColor: "@PrimaryColorLighten2"
-GroupboxBorderColor: darken(@GroupboxBackgroundColor,20)
+GroupboxBorderColor: "#cccccc"
 IconsLocationFolderName: images_classic
 InActiveTabBackgroundColor: "@PrimaryColorDarken2"
 InputFieldBorderRadius: 3px
